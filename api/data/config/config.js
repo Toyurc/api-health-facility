@@ -2,11 +2,18 @@ const fs = require('fs');
 // require('dotenv/config');
 
 module.exports = {
+  // development: {
+  //   username: 'root',
+  //   password: '',
+  //   database: 'HFMS',
+  //   host: '127.0.0.1',
+  //   dialect: 'mysql'
+  // },
   development: {
-    username: 'root',
-    password: '',
-    database: 'HFMS',
-    host: '127.0.0.1',
+    username: 'b4eed4f1524b2e',
+    password: '04064154',
+    database: 'heroku_d1c8189056d7640',
+    host: 'us-cdbr-iron-east-03.cleardb.net',
     dialect: 'mysql'
   },
   test: {
@@ -18,7 +25,7 @@ module.exports = {
   },
   production: {
     username: 'b4eed4f1524b2e',
-    password: 'f0ecdbc1',
+    password: '04064154',
     database: 'heroku_d1c8189056d7640',
     host: 'us-cdbr-iron-east-03.cleardb.net',
     dialect: 'mysql'
