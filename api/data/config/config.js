@@ -3,9 +3,9 @@ const fs = require('fs');
 
 module.exports = {
   development: {
-    username: 'bb0f4e2d71c8aa',
-    password: 'f0ecdbc1',
-    database: 'heroku_4976050155a9d46',
+    username: 'b4eed4f1524b2e',
+    password: '04064154',
+    database: 'heroku_d1c8189056d7640',
     host: 'us-cdbr-iron-east-03.cleardb.net',
     dialect: 'mysql'
   },
@@ -17,10 +17,12 @@ module.exports = {
     dialect: 'mysql'
   },
   production: {
-    username: 'bb0f4e2d71c8aa',
+    username: 'b4eed4f1524b2e',
     password: 'f0ecdbc1',
-    database: 'heroku_4976050155a9d46',
+    database: 'heroku_d1c8189056d7640',
     host: 'us-cdbr-iron-east-03.cleardb.net',
     dialect: 'mysql'
   }
 };
+
+// mysql://b4eed4f1524b2e:04064154@us-cdbr-iron-east-03.cleardb.net/heroku_d1c8189056d7640?reconnect=true

@@ -6,37 +6,28 @@ module.exports = (sequelize, DataTypes) => {
     dob: DataTypes.DATE,
     phone_number: DataTypes.STRING,
     address: DataTypes.STRING,
+    weight: DataTypes.FLOAT,
+    height: DataTypes.FLOAT,
+    blood_group: DataTypes.STRING,
+    genotype: DataTypes.STRING,
+    religion: DataTypes.STRING,
+    marital_status: DataTypes.STRING,
+    known_allergies: DataTypes.STRING,
+    known_ailment: DataTypes.STRING,
+    known_medications: DataTypes.STRING,
+    state_origin: DataTypes.STRING,
     occupation: {
       type: DataTypes.STRING
     },
-    patient_id: {
-      type: DataTypes.STRING,
+    patient_no: {
+      type: DataTypes.INTEGER,
       primaryKey: true,
-    },
-    next_of_kin_name: {
-      type: DataTypes.STRING
-    },
-    next_of_kin_phone_number: {
-      type: DataTypes.STRING
-    },
-    next_of_kin_relationship: {
-      type: DataTypes.STRING
-    },
-    next_of_kin_occupation: {
-      type: DataTypes.STRING
-    },
-    next_of_kin_address: {
-      type: DataTypes.STRING
     },
   });
   Patient.associate = (models) => {
-        Patient.hasMany(models.Patient_X_Staff, {
-          foreignKey: 'patient_id',
-          as: 'assignments'
-        });
-        Patient.hasMany(models.Patient_Vitals, {
-          foreignKey: 'patient_id',
-          as: 'assigned'
+        Patient.hasMany(models.comments, {
+          foreignKey: 'patient_no',
+          as: 'comment'
         });
       };
   return Patient;

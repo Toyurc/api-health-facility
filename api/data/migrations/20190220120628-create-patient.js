@@ -8,8 +8,8 @@ module.exports = {
         unique: true,
         type: Sequelize.INTEGER
       },
-      patient_id: {
-        type: Sequelize.STRING,
+      patient_no: {
+        type: Sequelize.INTEGER,
         primaryKey: true,
       },
       first_name: {
@@ -24,25 +24,40 @@ module.exports = {
       phone_number: {
         type: Sequelize.STRING
       },
+      weight: {
+        type: Sequelize.FLOAT
+      },
+      height: {
+        type: Sequelize.FLOAT
+      },
+      blood_group: {
+        type: Sequelize.STRING
+      },
+      genotype: {
+        type: Sequelize.STRING
+      },
+      religion: {
+        type: Sequelize.STRING
+      },
+      marital_status: {
+        type: Sequelize.STRING
+      },
+      known_allergies: {
+        type: Sequelize.STRING
+      },
+      known_ailment: {
+        type: Sequelize.STRING
+      },
+      known_medications: {
+        type: Sequelize.STRING
+      },
       address: {
         type: Sequelize.STRING
       },
       occupation: {
         type: Sequelize.STRING
       },
-      next_of_kin_name: {
-        type: Sequelize.STRING
-      },
-      next_of_kin_phone_number: {
-        type: Sequelize.STRING
-      },
-      next_of_kin_relationship: {
-        type: Sequelize.STRING
-      },
-      next_of_kin_occupation: {
-        type: Sequelize.STRING
-      },
-      next_of_kin_address: {
+      state_origin: {
         type: Sequelize.STRING
       },
       createdAt: {
