@@ -6,12 +6,9 @@ import cors from 'cors';
 
 
 //Resource
-import AdminResource from './api/rest/admin/AdminResource'; 
-import PatientResource from './api/rest/patient/PatientResource'; 
-import StaffResource from './api/rest/staff/StaffResource'; 
-import NurseResource from './api/rest/nurse/NurseResource'; 
-import DoctorResource from './api/rest/doctor/DoctorResource';
-import LabAttendantResource from './api/rest/lab/LabAttendantResource'; 
+import PatientResource from './api/rest/patient/PatientResource';  
+import HealthFacilityResource from './api/rest/patient/HealthFacilityResource';
+import CommentResource from './api/rest/patient/CommentResource';
 
 
 const app = express();
@@ -23,12 +20,9 @@ app.use(urlencoded({
     extended: true
 }));
 
-app.use('/api/v1', AdminResource);
 app.use('/api/v1', PatientResource);
-app.use('/api/v1', StaffResource);
-app.use('/api/v1', NurseResource);
-app.use('/api/v1', DoctorResource);
-app.use('/api/v1', LabAttendantResource);
+app.use('/api/v1', HealthFacilityResource);
+app.use('/api/v1', CommentResource);
 
 app.use((request, response, next) => {
     let error = new Error('Invalid Resource');
@@ -45,7 +39,9 @@ app.use((err, request, response, next) => {
     });
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`App listening on port ${process.env.PORT}`);
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+    console.log(`App listening on port ${port}`);
 });
 

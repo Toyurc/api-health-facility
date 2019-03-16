@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       patient_no: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         primaryKey: true,
       },
       first_name: {

@@ -3,10 +3,10 @@ const fs = require('fs');
 
 module.exports = {
   development: {
-    username: 'b4eed4f1524b2e',
-    password: '04064154',
-    database: 'heroku_d1c8189056d7640',
-    host: 'us-cdbr-iron-east-03.cleardb.net',
+    username: 'root',
+    password: '',
+    database: 'HFMS',
+    host: '127.0.0.1',
     dialect: 'mysql'
   },
   test: {

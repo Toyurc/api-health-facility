@@ -15,12 +15,11 @@ module.exports = (sequelize, DataTypes) => {
     known_allergies: DataTypes.STRING,
     known_ailment: DataTypes.STRING,
     known_medications: DataTypes.STRING,
-    state_origin: DataTypes.STRING,
     occupation: {
       type: DataTypes.STRING
     },
     patient_no: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       primaryKey: true,
     },
   });

@@ -5,14 +5,15 @@ module.exports = {
       id: {
         allowNull: false,
         autoIncrement: true,
-        primaryKey: true,
+        unique: true,
         type: Sequelize.INTEGER
       },
       name: {
         type: Sequelize.STRING
       },
       reg_no: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING,
+        primaryKey: true,
       },
       location: {
         type: Sequelize.STRING

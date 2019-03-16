@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.DATE
       },
       patient_no: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         references: {
           model: 'Patients',
           key: 'patient_no',
