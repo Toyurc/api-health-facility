@@ -19,8 +19,9 @@ export default class HealthFacilityService {
     }
 
     static async authenticateHealthFacility(reg_no) {
+        let healthFacility = null
         try {
-            return await HealthFacility.findAll({
+            healthFacility = await HealthFacility.findOne({
                 where: {
                     reg_no: reg_no
                 }
@@ -30,6 +31,8 @@ export default class HealthFacilityService {
             console.log(err);
             HealthFacilityService.produceError('Cannot verify health facility', 400)
         }
+        if (healthFacility) return healthFacility;
+        HealthFacilityService.produceError('Unable to create Health Facility at this time', 400)
     }
 
     static produceError(message, status) {

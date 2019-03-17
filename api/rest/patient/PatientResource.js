@@ -21,5 +21,15 @@ router.get('/patients/:patient_no', (request, response, next) => {
         next(err);
     });
 });
+router.put('/patients', (request, response, next) => {
+    PatientService.updatePatient(request)
+        .then(result => {
+            response.status(200);
+            response.json(result);
+        })
+        .catch(err => {
+            next(err);
+        })
+})
 
 export default router;
