@@ -39,7 +39,7 @@ app.use((err, request, response, next) => {
     });
 });
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT;
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);
