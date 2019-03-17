@@ -3,6 +3,7 @@ import express from 'express';
 import {json, urlencoded} from 'body-parser';
 import logger from 'morgan';
 import cors from 'cors';
+import http from 'http'
 
 
 //Resource
@@ -39,9 +40,10 @@ app.use((err, request, response, next) => {
     });
 });
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
+const server = http.createServer(app); 
 
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`App listening on port ${port}`);
 });
 
