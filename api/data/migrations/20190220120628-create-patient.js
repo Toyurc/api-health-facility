@@ -33,6 +33,18 @@ module.exports = {
       blood_group: {
         type: Sequelize.STRING
       },
+      hiv: {
+        type: Sequelize.STRING
+      },
+      blood_pressure_high: {
+        type: Sequelize.STRING
+      },
+      blood_pressure_low: {
+        type: Sequelize.STRING
+      },
+      asthma: {
+        type: Sequelize.STRING
+      },
       genotype: {
         type: Sequelize.STRING
       },
