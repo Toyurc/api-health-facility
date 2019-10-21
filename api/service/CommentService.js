@@ -6,8 +6,9 @@ export default class CommentService {
         let comment = null;
         try {
             //get time
-            request.body.reg_no = Date.now().toString();
-            comment = await Comment.create(request.body);
+            const { body } = request;
+            body.reg_no = Date.now().toString();
+            comment = await Comment.create(body);
         } 
         catch (err) {
             console.log(err);
